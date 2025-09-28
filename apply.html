@@ -35,7 +35,7 @@
     .textarea{min-height:120px;resize:vertical}
     .grid-2{display:grid;gap:18px;grid-template-columns:1fr 1fr}
     .grid-3{display:grid;gap:18px;grid-template-columns:1fr 1fr 1fr}
-    @media (max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}}
+    @media (max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr} .menu-toggle{display:inline-flex} .menu{display:none;position:absolute;right:12px;left:12px;top:56px;background:rgba(249,246,238,.98);border:1px solid rgba(28,26,24,.08);border-radius:14px;padding:12px;flex-direction:column;gap:12px} .menu.open{display:flex} .menu a, .menu select{width:100%}}
     .consent{display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:rgba(28,26,24,.85)}
     .consent input{margin-top:3px}
     .btn-apply{display:inline-block;margin-top:8px;background:transparent;color:var(--ink);padding:16px 28px;border-radius:999px;border:1px solid rgba(204,181,148,.7);letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:transform .2s,background .2s,border-color .2s}

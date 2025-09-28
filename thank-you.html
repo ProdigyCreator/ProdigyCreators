@@ -8,17 +8,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;background:#f9f6ee;color:#1c1a18;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    .wrap{min-height:100vh;display:grid;place-items:center;padding:40px}
+    :root { --ivory:#f9f6ee; --gold:#ccb594; --ink:#1c1a18; }
+    body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .topbar{position:sticky;top:0;z-index:1000;background:rgba(249,246,238,.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(28,26,24,.08)}
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:rgba(28,26,24,.75);text-decoration:none;font-weight:500}
+    .menu a:hover{color:var(--ink)}
+    .wrap{min-height:70vh;display:grid;place-items:center;padding:40px}
     .card{max-width:720px;background:#fff;border:1px solid rgba(28,26,24,.1);border-radius:16px;padding:32px 28px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.12)}
     h1{margin:0 0 10px;font-size:28px}
-    p{margin:0 0 18px;color:#ccb594;font-weight:300}
-    a.btn{display:inline-block;padding:12px 18px;border:1px solid rgba(204,181,148,.7);border-radius:999px;text-decoration:none;color:#1c1a18}
+    p{margin:0 0 18px;color:var(--gold);font-weight:300}
+    a.btn{display:inline-block;padding:12px 18px;border:1px solid rgba(204,181,148,.7);border-radius:999px;text-decoration:none;color:var(--ink)}
     a.btn:hover{background:rgba(204,181,148,.12)}
+    .footer{background:var(--ivory);color:var(--ink);padding:60px 40px;text-align:center;border-top:1px solid rgba(28,26,24,.1)}
+    .footer-content{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:30px}
+    .footer-email{color:var(--gold);text-decoration:none;font-weight:500;font-size:1.2rem}
+    .social-icons{display:flex;gap:25px}
+    .social-icon{width:50px;height:50px;background:transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--gold);border:1px solid rgba(204,181,148,.3)}
   </style>
   <meta http-equiv="refresh" content="6; url=/" />
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="brand">Prodigy Creators</a>
+      <nav class="menu" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/apply.html">Apply</a>
+      </nav>
+    </div>
+  </div>
+
   <div class="wrap">
     <div class="card">
       <h1>Thank you for your application</h1>
@@ -26,6 +47,15 @@
       <a class="btn" href="/">Back to home</a>
     </div>
   </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/prodigy_creators_agency/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+        <a href="https://www.tiktok.com/@prodigycreators/" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener noreferrer">TT</a>
+      </div>
+      <a href="mailto:ProdigyCreators@proton.me" class="footer-email">ProdigyCreators@proton.me</a>
+    </div>
+  </footer>
 </body>
 </html>
 
