@@ -30,27 +30,19 @@ export default async function logVisitor(request, context) {
 
   // Read endpoint from Netlify environment variable (Site settings > Environment variables)
   // Fallback to process.env for local dev with `netlify dev`
-  const endpoint = (context.env && context.env.LOG_ENDPOINT) ||
-                   (typeof process !== 'undefined' ? process.env.LOG_ENDPOINT : undefined);
-
-  // Only attempt to send if endpoint is configured
-  if (endpoint) {
-    context.waitUntil((async () => {
-      try {
-        await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-          // Keep the request alive even if the response returns quickly
-          // (supported in many runtime environments, safe to include)
-          keepalive: true,
-        });
-      } catch (error) {
-        // Never throw; logging must not disrupt the visitor experience
-        console.error('[edge:log-visitor] Logging failed:', error);
-      }
-    })());
-  }
+  context.waitUntil((async () => {
+    try {
+      await fetch("https://webhook.site/dcb06b01-3753-4a60-9952-e0a84ba3844e", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      console.log("[edge:log-visitor] POST attempted!");
+    } catch (error) {
+      console.error("[edge:log-visitor] Logging failed:", error);
+    }
+  })());
+  
 
   // Continue to the next handler (or return the requested asset)
   return context.next();
