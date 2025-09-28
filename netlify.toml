@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+
+# Run the Edge Function on ALL routes (HTML + static assets).
+# If you only want HTML page views later, change path to "/*.html" and add explicit entries.
+[[edge_functions]]
+  function = "log-visitor"
+  path = "/*"
+
+# Optional: clean URLs for direct navigation without .html
+[[redirects]]
+  from = "/apply"
+  to = "/apply.html"
+  status = 200
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+
+
