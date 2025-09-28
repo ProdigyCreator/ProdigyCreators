@@ -130,7 +130,8 @@
         .menu a:hover { color: #1c1a18; }
         .cta-small { border: 1px solid rgba(204,181,148,.6); padding: 8px 14px; border-radius: 999px; color: #1c1a18; }
         .cta-small:hover { background: rgba(204,181,148,.12); }
-        .menu-toggle { display: none; border: 1px solid rgba(204,181,148,.6); background: transparent; padding: 8px 12px; border-radius: 10px; color: #1c1a18; }
+        .menu-toggle { display: none; border: 1px solid rgba(204,181,148,.6); background: transparent; padding: 8px 10px; border-radius: 10px; color: #1c1a18; width: 42px; height: 36px; display: none; align-items: center; justify-content: center; gap: 5px; flex-direction: column; }
+        .menu-toggle .bar { width: 22px; height: 2px; background: #1c1a18; border-radius: 2px; }
 
         .hero {
             min-height: 100vh;
@@ -751,7 +752,11 @@
                   <option value="es">ES</option>
                 </select>
             </nav>
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
         </div>
     </div>
 

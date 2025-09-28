@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apply – Prodigy Creators</title>
   <meta name="description" content="Apply to Prodigy Creators – we select a limited number of rising creators each month." />
+  <link rel="icon" type="image/png" href="./32786536%20-%20Modifi%C3%A9.png?v=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="./32786536%20-%20Modifi%C3%A9.png?v=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,7 +53,7 @@
 </head>
 <body>
   <div class="topbar">
-    <div class="container topbar-inner">
+    <div class="container topbar-inner" style="position:relative">
       <a class="brand" href="./">Prodigy Creators</a>
       <nav class="menu" aria-label="Primary">
         <a href="./#about" data-i18n="nav.about">About</a>
@@ -65,6 +67,7 @@
           <option value="es">ES</option>
         </select>
       </nav>
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     </div>
   </div>
 
@@ -189,6 +192,17 @@
       <p class="copyright">© 2024 Prodigy Creators. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    // Mobile menu toggle
+    const menu = document.querySelector('.menu');
+    const toggle = document.querySelector('.menu-toggle');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  </script>
   <script>
     // i18n shared dictionary
     const messages = {
