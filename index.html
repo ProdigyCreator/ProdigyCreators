@@ -122,7 +122,7 @@
 
         /* Header and Hero Section */
         .topbar { position: sticky; top: 0; z-index: 1000; background: rgba(249,246,238,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(28,26,24,0.08); }
-        .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .topbar-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
         .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #1c1a18; font-weight: 600; }
         .brand__img { height: 34px; width: auto; display: block; }
         .menu { display: flex; gap: 18px; align-items: center; }
@@ -130,6 +130,7 @@
         .menu a:hover { color: #1c1a18; }
         .cta-small { border: 1px solid rgba(204,181,148,.6); padding: 8px 14px; border-radius: 999px; color: #1c1a18; }
         .cta-small:hover { background: rgba(204,181,148,.12); }
+        .menu-toggle { display: none; border: 1px solid rgba(204,181,148,.6); background: transparent; padding: 8px 12px; border-radius: 10px; color: #1c1a18; }
 
         .hero {
             min-height: 100vh;
@@ -666,6 +667,10 @@
             .tagline {
                 font-size: 1.2rem;
             }
+            .menu-toggle { display: inline-flex; }
+            .menu { display: none; position: absolute; right: 12px; left: 12px; top: 56px; background: rgba(249,246,238,.98); border: 1px solid rgba(28,26,24,.08); border-radius: 14px; padding: 12px; flex-direction: column; gap: 12px; }
+            .menu.open { display: flex; }
+            .menu a, .menu select { width: 100%; }
             
             .section h2 {
                 font-size: 2.5rem;
@@ -746,6 +751,7 @@
                   <option value="es">ES</option>
                 </select>
             </nav>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
         </div>
     </div>
 
@@ -829,7 +835,7 @@
     <div class="luxury-divider"></div>
 
     <!-- Benefits Section -->
-    <section class="benefits" id="why">
+    <section class="section benefits" id="why">
         <h2 data-i18n="why.title">Why Join Us</h2>
         <div class="benefits-list">
             <div class="benefit-item">
@@ -875,7 +881,7 @@
     <div class="luxury-divider"></div>
 
     <!-- Final CTA Section -->
-    <section class="final-cta" id="contact">
+    <section class="section final-cta" id="contact">
         <h2 data-i18n="cta.title">Call to Action</h2>
         <p class="cta-text" data-i18n="cta.text">Every global star starts small. Let's write your story together.</p>
         <a href="./apply.html" class="cta-button" data-i18n="nav.contact">Contact</a>
@@ -963,6 +969,16 @@
             el.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
             observer.observe(el);
         });
+        
+        // Mobile menu toggle
+        const menu = document.querySelector('.menu');
+        const toggle = document.querySelector('.menu-toggle');
+        if (toggle && menu) {
+          toggle.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
     </script>
     <script>
       // Lightweight i18n with auto-detect + manual switch
