@@ -1,0 +1,10 @@
+{
+  "functions": [
+    {
+      "path": "/*",
+      "function": "log-visitor"
+    }
+  ]
+}
+
+

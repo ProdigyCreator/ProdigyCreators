@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Prodigy Creators – From Hidden Talent to Global Icon</title>
+    <meta name="description" content="Prodigy Creators is a recruitment and talent accelerator agency that discovers rising TikTok & Instagram creators, boosts their growth with collaborations, and connects them to top global agencies.">
+    <meta name="keywords" content="talent agency, creator recruitment, TikTok creators, Instagram influencers, talent accelerator, social media agency">
+    <meta name="author" content="Prodigy Creators">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Prodigy Creators – From Hidden Talent to Global Icon">
+    <meta property="og:description" content="Prodigy Creators is a recruitment and talent accelerator agency that discovers rising TikTok & Instagram creators, boosts their growth with collaborations, and connects them to top global agencies.">
+    <meta property="og:image" content="https://prodigycreators.pro/og-image.jpg">
+    <meta property="og:url" content="https://prodigycreators.pro/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Prodigy Creators">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prodigy Creators – From Hidden Talent to Global Icon">
+    <meta name="twitter:description" content="Prodigy Creators is a recruitment and talent accelerator agency that discovers rising TikTok & Instagram creators, boosts their growth with collaborations, and connects them to top global agencies.">
+    <meta name="twitter:image" content="https://prodigycreators.pro/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./32786536%20-%20Modifi%C3%A9.png?v=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="./32786536%20-%20Modifi%C3%A9.png?v=1">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1c1a18;
+            overflow-x: hidden;
+            background: #f9f6ee;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Default cursors */
+        body { cursor: auto; }
+        a, button { cursor: pointer; }
+
+        /* Luxury Loading Animation */
+        .luxury-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f9f6ee, #f5f2ea, #f9f6ee);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeOut 2s ease-in-out 1s forwards;
+        }
+
+        .luxury-loader::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border: 3px solid transparent;
+            border-top: 3px solid #ccb594;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        /* Luxury Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ccb594;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+        }
+
+        /* Header and Hero Section */
+        .topbar { position: sticky; top: 0; z-index: 1000; background: rgba(249,246,238,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(28,26,24,0.08); }
+        .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #1c1a18; font-weight: 600; }
+        .brand__img { height: 34px; width: auto; display: block; }
+        .menu { display: flex; gap: 18px; align-items: center; }
+        .menu a { color: rgba(28,26,24,0.75); text-decoration: none; font-weight: 500; letter-spacing: .3px; }
+        .menu a:hover { color: #1c1a18; }
+        .cta-small { border: 1px solid rgba(204,181,148,.6); padding: 8px 14px; border-radius: 999px; color: #1c1a18; }
+        .cta-small:hover { background: rgba(204,181,148,.12); }
+
+        .hero {
+            min-height: 100vh;
+            background: #f9f6ee;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 12px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+        }
+
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 40px;
+        }
+
+        .logo {
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1.5s ease-out;
+            position: relative;
+            display: inline-block;
+            filter: drop-shadow(0 10px 30px rgba(204, 181, 148, 0.2));
+            transition: all 0.4s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 20px 50px rgba(204, 181, 148, 0.3));
+        }
+
+        .logo img { animation: logoFloat 6s ease-in-out infinite; display: block; width: min(98vw, 700px); height: auto; }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.02); }
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: #ccb594;
+            margin-bottom: 1.6rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: fadeInUp 1.5s ease-out 0.5s both;
+            position: relative;
+        }
+
+        .tagline::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            width: 30px;
+            height: 1px;
+            background: #ccb594;
+        }
+
+        .tagline::after {
+            content: '';
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            width: 30px;
+            height: 1px;
+            background: #ccb594;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: transparent;
+            color: #1c1a18;
+            padding: 18px 60px;
+            text-decoration: none;
+            border: 1px solid rgba(204, 181, 148, 0.5);
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 1.5s ease-out 1s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(204, 181, 148, 0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .cta-button:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cta-button:hover {
+            color: #ccb594;
+            border-color: rgba(204, 181, 148, 0.8);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Luxury Divider */
+        .luxury-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(204, 181, 148, 0.4), transparent);
+            margin: 80px auto;
+            max-width: 100px;
+            position: relative;
+        }
+
+        .luxury-divider::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            background: #ccb594;
+            border-radius: 50%;
+        }
+
+        /* Main Content Sections */
+        .section {
+            padding: 90px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            scroll-margin-top: 90px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, #ccb594, transparent);
+        }
+
+        .section h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 200;
+            text-align: center;
+            margin-bottom: 5rem;
+            color: #1c1a18;
+            position: relative;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: rgba(204, 181, 148, 0.5);
+        }
+
+        /* About Section */
+        .about {
+            background: #f9f6ee;
+        }
+
+        .about-text {
+            font-size: 1.4rem;
+            line-height: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #ccb594;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services Section */
+        .services {
+            background: #f9f6ee;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: transparent;
+            padding: 60px 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(204,181,148,0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(204, 181, 148, 0.1), rgba(204, 181, 148, 0.05));
+            backdrop-filter: blur(20px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            font-size: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: #ccb594;
+            box-shadow: 0 10px 30px rgba(204, 181, 148, 0.1);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, rgba(204, 181, 148, 0.2), rgba(204, 181, 148, 0.1));
+            transform: scale(1.1) rotateY(15deg);
+            box-shadow: 0 20px 50px rgba(204, 181, 148, 0.2);
+        }
+
+        .service-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+            color: #1c1a18;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            color: rgba(28, 26, 24, 0.7);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Partners Section */
+        .partners { background: #f9f6ee; }
+        .partners-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .partner-card {
+            padding: 22px 26px;
+            border: 1px solid rgba(204, 181, 148, 0.30);
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: .6px;
+            color: #1c1a18;
+            background: transparent;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+        .partner-card:hover { transform: translateY(-3px); border-color: rgba(204,181,148,.6); box-shadow: 0 8px 22px rgba(204,181,148,.15); }
+
+        /* Application Form */
+        .apply { background: #f9f6ee; }
+        .apply .form-note { color: #ccb594; text-align: center; max-width: 880px; margin: 0 auto 26px; font-weight: 300; letter-spacing: .4px; }
+        .form { max-width: 880px; margin: 0 auto; display: grid; gap: 18px; }
+        .field { display: grid; gap: 8px; }
+        .field label { font-weight: 600; letter-spacing: .3px; color: #1c1a18; }
+        .input, .textarea, .select { appearance: none; background: #ffffff; border: 1px solid rgba(28,26,24,0.12); padding: 14px 14px; border-radius: 12px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+        .input:focus, .textarea:focus, .select:focus { border-color: rgba(204,181,148,.7); box-shadow: 0 0 0 4px rgba(204,181,148,.18); }
+        .textarea { min-height: 120px; resize: vertical; }
+        .grid-2 { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+        .grid-3 { display: grid; gap: 18px; grid-template-columns: 1fr 1fr 1fr; }
+        @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+        .consent { display: flex; align-items: flex-start; gap: 10px; font-size: .95rem; color: rgba(28,26,24,.85); }
+        .consent input { margin-top: 3px; }
+        .btn-apply { display: inline-block; margin-top: 8px; background: transparent; color: #1c1a18; padding: 16px 28px; border-radius: 999px; border: 1px solid rgba(204,181,148,.7); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+        .btn-apply:hover { transform: translateY(-2px); background: rgba(204,181,148,.12); border-color: rgba(204,181,148,.9); }
+
+
+        /* Why Join Section */
+        .benefits {
+            padding: 90px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f9f6ee;
+            scroll-margin-top: 90px;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            padding: 40px 30px;
+            background: transparent;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 2px;
+            height: 0;
+            background: linear-gradient(to bottom, #ccb594, transparent);
+            transition: height 0.4s ease;
+            transform: translateY(-50%);
+        }
+
+        .benefit-item:hover::before {
+            height: 60%;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(20px);
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(204, 181, 148, 0.1), transparent);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            color: #ccb594;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-text {
+            font-weight: 300;
+            color: rgba(28, 26, 24, 0.8);
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: #f9f6ee;
+            color: #1c1a18;
+            text-align: center;
+            padding: 90px 40px;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 90px;
+        }
+
+        .final-cta::before { display: none; }
+
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-5px, -5px); }
+            50% { transform: translate(5px, -5px); }
+            75% { transform: translate(-5px, 5px); }
+        }
+
+        .final-cta h2 {
+            color: #1c1a18;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2::after {
+            background: linear-gradient(90deg, #ccb594, #ccb594, #ccb594);
+        }
+
+        .cta-text {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: #ccb594;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f9f6ee;
+            color: #1c1a18;
+            padding: 60px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(28, 26, 24, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-email {
+            color: #ccb594;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-email:hover {
+            color: #f9f6ee;
+            text-shadow: 0 0 10px rgba(204, 181, 148, 0.5);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ccb594;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(204, 181, 148, 0.3);
+            font-size: 1.2rem;
+        }
+
+        .social-icon:hover {
+            background: linear-gradient(135deg, #ccb594, #b8a482);
+            color: #1c1a18;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(204, 181, 148, 0.4);
+        }
+
+        .copyright {
+            color: rgba(204, 181, 148, 0.6);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 80px 20px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-item:hover {
+                transform: translateY(-5px) scale(1.02);
+            }
+            
+            .hero-content {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+            
+            .service-card {
+                padding: 40px 25px;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Ensure tagline and CTA visible on short screens */
+        @media (max-height: 820px) {
+            .logo img { width: min(96vw, 600px); }
+        }
+        @media (max-height: 680px) {
+            .logo img { width: min(94vw, 520px); }
+            .tagline { margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Luxury Loader -->
+    <div class="luxury-loader"></div>
+
+    <!-- Top Navigation -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <a href="#top" class="brand">Prodigy Creators</a>
+            <nav class="menu" aria-label="Primary">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#services" data-i18n="nav.vision">Vision</a>
+                <a href="#partners" data-i18n="nav.partners">Partners</a>
+                <a href="#why" data-i18n="nav.why">Why Us</a>
+                <a href="./apply.html" class="cta-small" data-i18n="nav.contact">Contact</a>
+                <select id="lang-switch" aria-label="Language switcher" style="border:1px solid rgba(204,181,148,.6);background:transparent;padding:8px 10px;border-radius:10px">
+                  <option value="en">EN</option>
+                  <option value="fr">FR</option>
+                  <option value="es">ES</option>
+                </select>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <div class="logo">
+                <img src="./06763fa2-11bc-4d24-bf62-030d292d1a43.png" alt="Prodigy Creators logo" />
+            </div>
+            <p class="tagline" data-i18n="hero.tagline">From hidden talent to global icon.</p>
+            <a href="./apply.html" class="cta-button" data-i18n="nav.contact">Contact</a>
+        </div>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <h2 data-i18n="about.title">About Us</h2>
+        <p class="about-text" data-i18n="about.text">
+            Prodigy Creators is where tomorrow’s stars are born. We hunt rising creators at the very start of their journey, skyrocket their growth, and open doors to exclusive collaborations and high-level opportunities. Our mission? To fast-track the next generation of prodigies straight into the biggest agencies across Europe and the world. Are you ready to become the creator everyone will be talking about tomorrow?
+        </p>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <h2 data-i18n="services.title">Our Vision</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="21 21l-4.35-4.35"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="services.discover.title">Discover</h3>
+                <p data-i18n="services.discover.text">Spot the hidden gems. We identify creators with unique potential and the drive to become the stars of tomorrow.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="services.boost.title">Boost</h3>
+                <p data-i18n="services.boost.text">Skyrocket your growth. From tailored coaching to brand deals and high-impact collaborations, we help you build a loyal, authentic audience fast.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="services.connect.title">Connect</h3>
+                <p data-i18n="services.connect.text">Step into the spotlight. We open doors to top global agencies and craft pathways to international recognition, turning ambition into opportunity.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- Partners Section -->
+    <section class="section partners" id="partners">
+        <h2 data-i18n="partners.title">Partners</h2>
+        <div class="partners-logos">
+            <div class="partner-card">We Are Era</div>
+            <div class="partner-card">Clark Influence</div>
+            <div class="partner-card">BeInfluence Europe</div>
+        </div>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="why">
+        <h2 data-i18n="why.title">Why Join Us</h2>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="benefit-text" data-i18n="why.benefit1">Direct access to collaborations</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                    </svg>
+                </div>
+                <div class="benefit-text" data-i18n="why.benefit2">Personalized mentorship</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                    </svg>
+                </div>
+                <div class="benefit-text" data-i18n="why.benefit3">A clear path from small creator to international recognition</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 3v18"/>
+                        <path d="M5 12h14"/>
+                        <circle cx="12" cy="12" r="9"/>
+                    </svg>
+                </div>
+                <div class="benefit-text" data-i18n="why.benefit4">A roadmap to 100k followers, then placement with larger partner agencies</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="contact">
+        <h2 data-i18n="cta.title">Call to Action</h2>
+        <p class="cta-text" data-i18n="cta.text">Every global star starts small. Let's write your story together.</p>
+        <a href="./apply.html" class="cta-button" data-i18n="nav.contact">Contact</a>
+    </section>
+
+    <div class="luxury-divider"></div>
+
+    <!-- (Modal removed; using dedicated apply page) -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/prodigy_creators_agency/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@prodigycreators/" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                    </svg>
+                </a>
+            </div>
+            <a href="mailto:ProdigyCreators@proton.me" class="footer-email">ProdigyCreators@proton.me</a>
+            <p class="copyright">© 2024 Prodigy Creators. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Luxury Particles Animation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        window.addEventListener('load', createParticles);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Luxury scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('.section, .service-card, .benefit-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            observer.observe(el);
+        });
+    </script>
+    <script>
+      // Lightweight i18n with auto-detect + manual switch
+      const messages = {
+        en: {
+          nav:{about:'About',vision:'Vision',partners:'Partners',why:'Why Us',contact:'Contact'},
+          hero:{tagline:'From hidden talent to global icon.'},
+          about:{title:'About Us',text:`Prodigy Creators is where tomorrow’s stars are born. We hunt rising creators at the very start of their journey, skyrocket their growth, and open doors to exclusive collaborations and high-level opportunities. Our mission? To fast-track the next generation of prodigies straight into the biggest agencies across Europe and the world. Are you ready to become the creator everyone will be talking about tomorrow?`},
+          services:{title:'Our Vision',discover:{title:'Discover',text:'Spot the hidden gems. We identify creators with unique potential and the drive to become the stars of tomorrow.'},boost:{title:'Boost',text:'Skyrocket your growth. From tailored coaching to brand deals and high-impact collaborations, we help you build a loyal, authentic audience fast.'},connect:{title:'Connect',text:'Step into the spotlight. We open doors to top global agencies and craft pathways to international recognition, turning ambition into opportunity.'}},
+          partners:{title:'Partners'},
+          why:{title:'Why Join Us',benefit1:'Direct access to collaborations',benefit2:'Personalized mentorship',benefit3:'A clear path from small creator to international recognition',benefit4:'A roadmap to 100k followers, then placement with larger partner agencies'},
+          cta:{title:'Call to Action',text:"Every global star starts small. Let's write your story together."}
+        },
+        fr: {
+          nav:{about:'À propos',vision:'Vision',partners:'Partenaires',why:'Pourquoi nous',contact:'Contact'},
+          hero:{tagline:'Du talent caché à l’icône mondiale.'},
+          about:{title:'À propos',text:`Prodigy Creators est l’accélérateur où naissent les étoiles de demain. Nous détectons les créateurs au tout début, propulsons leur croissance et ouvrons l’accès à des collaborations exclusives. Notre mission : faire entrer la nouvelle génération de prodiges dans les plus grandes agences en Europe et dans le monde.`},
+          services:{title:'Notre Vision',discover:{title:'Découvrir',text:'Détecter les talents cachés au fort potentiel.'},boost:{title:'Booster',text:'Accélérer votre croissance grâce au coaching, aux deals marques et aux collaborations à fort impact.'},connect:{title:'Connecter',text:'Ouvrir les portes des meilleures agences internationales et tracer des parcours vers la reconnaissance.'}},
+          partners:{title:'Partenaires'},
+          why:{title:'Pourquoi nous rejoindre',benefit1:'Accès direct aux collaborations',benefit2:'Mentorat personnalisé',benefit3:'Chemin clair vers la reconnaissance internationale',benefit4:'Feuille de route vers 100k abonnés puis placement chez nos agences partenaires'},
+          cta:{title:'Passez à l’action',text:'Chaque star mondiale a commencé petit. Écrivons votre histoire.'}
+        },
+        es: {
+          nav:{about:'Sobre nosotros',vision:'Visión',partners:'Socios',why:'Por qué unirte',contact:'Contacto'},
+          hero:{tagline:'De talento oculto a ícono global.'},
+          about:{title:'Sobre nosotros',text:`Prodigy Creators es el acelerador donde nacen las estrellas del mañana. Detectamos creadores al inicio, impulsamos su crecimiento y abrimos puertas a colaboraciones exclusivas. Nuestra misión: llevar a la próxima generación de prodigios a las agencias más grandes de Europa y del mundo.`},
+          services:{title:'Nuestra Visión',discover:{title:'Descubrir',text:'Detectar joyas ocultas con potencial único.'},boost:{title:'Impulsar',text:'Acelerar tu crecimiento con coaching, acuerdos de marca y colaboraciones de alto impacto.'},connect:{title:'Conectar',text:'Abrir puertas a las mejores agencias globales y crear caminos hacia el reconocimiento internacional.'}},
+          partners:{title:'Socios'},
+          why:{title:'Por qué unirte',benefit1:'Acceso directo a colaboraciones',benefit2:'Mentoría personalizada',benefit3:'Ruta clara hacia el reconocimiento internacional',benefit4:'Hoja de ruta a 100k seguidores y placement con agencias asociadas'},
+          cta:{title:'Call to Action',text:'Toda estrella global empieza en pequeño. Escribamos tu historia.'}
+        }
+      };
+      function setLang(lang){
+        const dict = messages[lang] || messages.en;
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const key = el.getAttribute('data-i18n').split('.').reduce((o,k)=>o&&o[k], dict);
+          if(typeof key === 'string') el.textContent = key;
+        });
+        localStorage.setItem('lang', lang);
+        const sw = document.getElementById('lang-switch'); if(sw) sw.value = lang;
+      }
+      (function(){
+        const stored = localStorage.getItem('lang');
+        const browser = (navigator.language||'en').slice(0,2).toLowerCase();
+        const initial = stored || (['fr','es'].includes(browser)? browser : 'en');
+        setLang(initial);
+        const sw = document.getElementById('lang-switch');
+        if(sw){ sw.addEventListener('change', (e)=> setLang(e.target.value)); }
+      })();
+    </script>
+    <script>
+        // Modal open/close
+        const modal = document.getElementById('apply-modal');
+        const openers = document.querySelectorAll('[data-open-modal]');
+        const closers = document.querySelectorAll('[data-close-modal]');
+        function openModal(e){ e && e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+        function closeModal(e){ e && e.preventDefault(); modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+        openers.forEach(btn=>btn.addEventListener('click', openModal));
+        closers.forEach(btn=>btn.addEventListener('click', closeModal));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9863f231168b996c',t:'MTc1OTA2OTkwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b); 'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
