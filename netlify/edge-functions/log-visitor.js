@@ -4,6 +4,8 @@
 // - Non-blocking: uses context.waitUntil so page performance is not impacted
 
 export default async function logVisitor(request, context) {
+  console.log("[edge:log-visitor] Function executed!", new Date().toISOString());
+
   // Extract client IP address from common proxy/CDN headers
   const forwardedFor = request.headers.get('x-forwarded-for');
   const ip =
